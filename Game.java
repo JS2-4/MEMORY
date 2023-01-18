@@ -96,9 +96,9 @@ public void Begin1(){
 public void Begin(String input){
     
          if(!input.equals("/begin")){
-            Begin1();
             System.out.println("Error:");
-             input = sc.next();
+             Begin1();
+                input = sc.next();
         }
     Game1();
     
