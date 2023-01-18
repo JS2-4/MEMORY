@@ -84,8 +84,28 @@ public Game() {
     easel.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
     easel.setVisible (true);
     this.setBackground(Color.black);
+    Begin1();
+}
+
+public void Begin1(){
+    System.out.println("Write /begin to begin)");
+         String input = sc.next();
+         Begin(input);
+}
+
+public void Begin(String input){
+    
+         if(!input.equals("/begin")){
+            Begin1();
+            System.out.println("Error:");
+             input = sc.next();
+        }
+    Game1();
+    
+}
 
 
+public void Game1(){
 while(MoneyLeft < 25000){
             System.out.println("Which Mode? (type /dice or /slots)");
          String input = sc.next();
@@ -250,19 +270,19 @@ public void slots(){
         amount_bet = 0;
     }
     if(result == 4){
-        MoneyLeft = MoneyLeft + amount_bet*7;
+        MoneyLeft = MoneyLeft + amount_bet*6;
         //let YOU_WIN hover over game for 1.5 seconds
         System.out.println("BAR! YOU WIN $" + amount_bet*7 + "!");
         amount_bet = 0;
     }
     if(A.result == 3){
-        MoneyLeft = MoneyLeft + amount_bet*7;
+        MoneyLeft = MoneyLeft + amount_bet*5;
         //let YOU_WIN hover over game for 1.5 seconds
         System.out.println("MATCH! YOU WIN $" + amount_bet*7 + "!");
         amount_bet = 0;
     }
     if(A.result == 2){
-        MoneyLeft = MoneyLeft + amount_bet*7;
+        MoneyLeft = MoneyLeft + amount_bet*4;
     //let YOU_WIN hover over game for 1.5 seconds
         System.out.println("MATCH! YOU WIN $" + amount_bet*7 + "!");
         amount_bet = 0;
